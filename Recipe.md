@@ -2,12 +2,6 @@
 By Ian Nacke
 
 ![Picture of Dan Bing with some meat inside](https://3.bp.blogspot.com/-j19But4DpsM/XMUWRTsuRvI/AAAAAAAAiUU/sL39oFOzt4sTj5cEgAnClM5ECtE8MqF9QCEwYBhgL/s1600/Dan%2Bbing_comp.jpg)
-term
-: definition
-蛋 (dan)
-: egg
-饼 (bing)
-: pastry
 
 **Dan Bing** is a taiwanese breakfast wrap. It's basically a "crepe"[^1] filled with fried egg and green onion. It's a little crunchy and savory. Dan bing is easy to make and you can store the prepped ingredients for even quicker cooking.
 
