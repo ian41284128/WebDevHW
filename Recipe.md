@@ -2,7 +2,8 @@
 By Ian Nacke
 
 ![Picture of Dan Bing with some meat inside](https://3.bp.blogspot.com/-j19But4DpsM/XMUWRTsuRvI/AAAAAAAAiUU/sL39oFOzt4sTj5cEgAnClM5ECtE8MqF9QCEwYBhgL/s1600/Dan%2Bbing_comp.jpg)
-
+term
+: definition
 蛋 (dan)
 : egg
 饼 (bing)
