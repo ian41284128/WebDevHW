@@ -8,6 +8,7 @@ By Ian Nacke
 [^1]: though the word crepe feels wrong somehow
 
 ## Ingredients
+*See directions for rough measurements*
 - Flour
 - corn starch
 - water
