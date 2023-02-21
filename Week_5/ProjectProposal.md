@@ -2,7 +2,7 @@
 
 ## Title: My Running Journey
 
-[Wireframe]()
+[Wireframe](https://ian41284128.github.io/WebDevHW/Week_5/)
 
 ### Concept:
 
@@ -36,11 +36,9 @@ Since I started running, I've run in NYC, Seattle, and hope to run in Shanghai, 
 
 * Positioning divs side by side (maps + milestones)
 
-* Including transparent images
+* Including transparent images, overlaying divs and images
 
-* box shadow to make elements appear 3D
-
-* display running stats (distance, splits, etc) on top of map (image)
+* box shadow/css tricks to make elements appear 3D
 
 *What I still need to learn:*
 
@@ -51,3 +49,7 @@ Since I started running, I've run in NYC, Seattle, and hope to run in Shanghai, 
 * how to have a path of footprints going down the length of the page
 
 * other cool aesthetic tricks (making the footprints fade in as u scroll???)
+
+* still don't really get how to use flexbox
+
+* and I def need practice designing for iphone

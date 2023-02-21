@@ -72,6 +72,13 @@ header p{
     display: inline-block;
 }
 
+.running-stats{
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    padding: 10px;
+}
+
 .location-transition{
     position: relative;
     z-index: 10;
@@ -89,4 +96,12 @@ header p{
     width: 50%;
     position: relative;
     left: 25%;
+}
+
+.item-date{
+    position: absolute;
+    left: 49%;
+    top:40%;
+    background-color: grey;
+    z-index: 10;
 }
