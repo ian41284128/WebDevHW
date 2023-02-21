@@ -37,15 +37,14 @@ header p{
     z-index: 1;
 }
 
-.roadmap-item{
-    position: relative;
-    margin: 100px;
-    height: 50vh;
-}
-
 /* This implementation of roadmap-items does not actually work!!! 
    roadmap-item height is off if milestone text is too long*/
 
+.roadmap-item{
+    position: relative;
+    margin: 100px;
+    height: 60vh;
+}
 
 .milestone{
     background-color: grey;
@@ -71,4 +70,23 @@ header p{
     right: 10%;
     top: 0;
     display: inline-block;
+}
+
+.location-transition{
+    position: relative;
+    z-index: 10;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.location-transition h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.location-transition p{
+    margin: 20px;
+    width: 50%;
+    position: relative;
+    left: 25%;
 }
