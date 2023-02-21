@@ -20,6 +20,10 @@ Viewers will be able to see all of my past recorded runs, but the page will be b
 
 A map aesthetic underlying pictures of physical objects and places, like a scrapbook. Lots of pictures of myself and photos I've taken, to make the site my own.
 
+![two potential layouts](../Week_4/LayoutWireframes.jpg)
+![a concept involving scrolling up instead of down](../Week_4/ScrollUpWireframe.jpg)
+![an example of a city transition](../Week_4/CityTransitionWireframe.jpg)
+
 **The look:**
 
 [Moodboard](https://www.pinterest.com/hylianchicken/running-site-mood-board/) 
