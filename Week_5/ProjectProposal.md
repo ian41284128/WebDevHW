@@ -29,6 +29,8 @@ A map aesthetic underlying pictures of physical objects and places, like a scrap
 [Moodboard](https://www.pinterest.com/hylianchicken/running-site-mood-board/) 
 |
 [Nomadic Tribe](https://2019.makemepulse.com/)
+|
+[BrandStudio](https://bstd.ru/en/)
 
 A line of footprints running down the center of the page like a dotted line. Milestones appear next to the footpath accompanied by maps showing the routes I took on my runs on the other side (alternating sides with each milestone).
 
