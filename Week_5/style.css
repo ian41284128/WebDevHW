@@ -1,0 +1,74 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    background-color: lightgray;
+}
+
+header{
+    padding: 10px;
+    background-color: darkgrey;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+h1{
+    position: relative;
+    margin: 0;
+    width: 50%;
+    left: 25%;
+}
+
+header p{
+    position: relative;
+    width: 50%;
+    left: 25%;
+}
+
+.center-path{
+    position: fixed;
+    border: 2px dashed white;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    margin: 10px;
+    z-index: 1;
+}
+
+.roadmap-item{
+    position: relative;
+    margin: 100px;
+    height: 50vh;
+}
+
+/* This implementation of roadmap-items does not actually work!!! 
+   roadmap-item height is off if milestone text is too long*/
+
+
+.milestone{
+    background-color: grey;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.left{
+    position: absolute;
+    left: 10%;
+    top: 0;
+    display: inline-block;
+}
+
+.running-map{
+    margin: 10px;
+}
+
+.right{
+    position: absolute;
+    right: 10%;
+    top: 0;
+    display: inline-block;
+}
