@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+<script>
+// this is a special type of icon. You can remove this class if you don't need it
+L.PopupIcon = L.Icon.extend({
+    initialize: function( text, options ) {
+        L.Icon.prototype.initialize.call(this, options);
+        this._text = text;
+    },
+
+    createIcon: function() {
+        var pdiv = document.createElement('div'),
+            div = document.createElement('div'),
+            width = 150;
+
+        pdiv.style.position = 'absolute';
+        div.style.position = 'absolute';
+        div.style.width = width + 'px';
+        div.style.bottom = '-3px';
+        div.style.pointerEvents = 'none';
+        div.style.left = (-width / 2) + 'px';
+        div.style.margin = div.style.padding = '0';
+        pdiv.style.margin = pdiv.style.padding = '0';
+
+        var contentDiv = document.createElement('div');
+        contentDiv.innerHTML = this._text;
+        contentDiv.style.textAlign = 'center';
+        contentDiv.style.lineHeight = '1.2';
+        contentDiv.style.backgroundColor = 'white';
+        contentDiv.style.boxShadow = '0px 1px 10px rgba(0, 0, 0, 0.655)';
+        contentDiv.style.padding = '4px 7px';
+        contentDiv.style.borderRadius = '5px';
+        contentDiv.style.margin = '0 auto';
+        contentDiv.style.display = 'table';
+        contentDiv.style.pointerEvents = 'auto';
+
+        var stop = L.DomEvent.stopPropagation;
+        L.DomEvent
+            .on(contentDiv, 'click', stop)
+            .on(contentDiv, 'mousedown', stop)
+            .on(contentDiv, 'dblclick', stop);
+
+        var tipcDiv = document.createElement('div');
+        tipcDiv.className = 'leaflet-popup-tip-container';
+        tipcDiv.style.width = '20px';
+        tipcDiv.style.height = '11px';
+        tipcDiv.style.padding = '0';
+        tipcDiv.style.margin = '0 auto';
+        var tipDiv = document.createElement('div');
+        tipDiv.className = 'leaflet-popup-tip';
+        tipDiv.style.width = tipDiv.style.height = '8px';
+        tipDiv.style.marginTop = '-5px';
+        tipDiv.style.boxShadow = 'none';
+        tipcDiv.appendChild(tipDiv);
+
+        div.appendChild(contentDiv);
+        div.appendChild(tipcDiv);
+        pdiv.appendChild(div);
+        return pdiv;
+    },
+
+    createShadow: function () {
+        return null;
+    }
+});
+</script>
+<style>
+html, body, #map { margin: 0; height: 100%; }
+#title {
+    position: absolute;
+    width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    left: 0; right: 0;
+    top: 10px;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: white;
+    opacity: 0.9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: none;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="title"></div>
+<script>
+var map = L.map('map');
+L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+    minZoom: 0, maxZoom: 19
+}).addTo(map);
+
+var data = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"title":"It\u2019s pt time"},"geometry":{"type":"LineString","coordinates":[[-73.99678,40.73826],[-73.99689,40.73858],[-73.99706,40.73848],[-73.99762,40.73858],[-73.99927,40.73928],[-73.99947,40.73928],[-74.00043,40.73982],[-74.00096,40.73993],[-74.00118,40.73989],[-74.00148,40.73995],[-74.00176,40.74019],[-74.00217,40.74031],[-74.00261,40.74067],[-74.00284,40.74076],[-74.0029,40.74092],[-74.00314,40.74102],[-74.00355,40.74129],[-74.00368,40.74129],[-74.00416,40.74153],[-74.00449,40.74161],[-74.00526,40.74153],[-74.00525,40.74162],[-74.00536,40.74175],[-74.00615,40.74212],[-74.00673,40.74226],[-74.00698,40.74226],[-74.00742,40.7427],[-74.00838,40.743],[-74.00901,40.7429],[-74.0093,40.74298],[-74.00925,40.74314],[-74.00877,40.7435],[-74.00872,40.74359],[-74.00869,40.74378],[-74.00878,40.74386],[-74.00881,40.74443],[-74.00874,40.74491],[-74.00867,40.74506],[-74.00803,40.74572],[-74.00799,40.74594],[-74.00785,40.74622],[-74.0077,40.74628],[-74.00752,40.74645],[-74.00759,40.74707],[-74.00751,40.74735],[-74.00744,40.74742],[-74.00743,40.74795],[-74.00786,40.74828],[-74.00889,40.74876],[-74.00909,40.74892],[-74.00932,40.74895],[-74.00979,40.74915],[-74.0098,40.74931],[-74.00956,40.74993],[-74.00923,40.75003],[-74.00913,40.75038],[-74.01049,40.75096],[-74.01061,40.75119],[-74.01044,40.75121],[-74.00911,40.75067],[-74.00898,40.75067],[-74.00839,40.75231],[-74.00788,40.75357],[-74.00775,40.75374],[-74.00754,40.75389],[-74.00699,40.75475],[-74.00627,40.75566],[-74.00475,40.75781],[-74.00441,40.75811],[-74.00398,40.75883],[-74.00358,40.75937],[-74.0037,40.75958],[-74.00355,40.75983],[-74.00342,40.76003],[-74.00294,40.76043],[-74.0022,40.76159],[-74.00138,40.76269],[-74.00092,40.76348],[-74.00096,40.76354],[-74.00226,40.76405],[-74.00254,40.76433],[-74.00254,40.76444],[-74.00195,40.76428],[-74.00147,40.76392],[-74.00123,40.76385],[-74.00085,40.76355],[-74.00074,40.76328],[-74.00062,40.76338],[-74.00045,40.76341],[-74.00022,40.76335],[-74.00004,40.76337],[-73.99961,40.76361],[-73.99903,40.76439],[-73.99888,40.76449],[-73.99795,40.76562],[-73.99611,40.76809],[-73.99589,40.76856],[-73.9959,40.76884],[-73.9958,40.76908],[-73.99528,40.76989],[-73.99536,40.77001],[-73.99573,40.77009],[-73.99587,40.77022],[-73.99588,40.77038],[-73.99539,40.77109],[-73.99511,40.77137],[-73.99486,40.77146],[-73.99456,40.77197],[-73.99439,40.77215],[-73.99486,40.77148],[-73.9952,40.77124],[-73.99547,40.77092],[-73.99585,40.77029],[-73.99582,40.77017],[-73.99571,40.77008],[-73.99553,40.77004],[-73.99529,40.77009],[-73.99521,40.77017],[-73.99511,40.77072],[-73.99523,40.77056],[-73.99583,40.77036],[-73.99582,40.77023],[-73.99567,40.77008],[-73.99536,40.77002],[-73.99525,40.76984],[-73.99595,40.76875],[-73.99591,40.76856],[-73.99602,40.7683],[-73.99715,40.76669],[-73.99797,40.76566],[-73.99814,40.76537],[-73.99962,40.76355],[-73.99998,40.76331],[-74.0007,40.76327],[-74.00125,40.76277],[-74.00252,40.76105],[-74.00292,40.76065],[-74.00351,40.75988],[-74.00366,40.75928],[-74.00476,40.75772],[-74.00569,40.75654],[-74.00714,40.75449],[-74.00747,40.7539],[-74.00778,40.75365],[-74.00816,40.75279],[-74.00871,40.75124],[-74.00873,40.75026],[-74.00888,40.75009],[-74.0095,40.74985],[-74.00983,40.749],[-74.00997,40.74889],[-74.01076,40.74891],[-74.011,40.74882],[-74.01109,40.74872],[-74.01096,40.74865],[-74.00935,40.74855],[-74.00893,40.74846],[-74.00891,40.74824],[-74.00901,40.74778],[-74.00919,40.74778],[-74.00922,40.74771],[-74.0092,40.74685],[-74.00925,40.7463],[-74.00937,40.74624],[-74.00927,40.74611],[-74.0093,40.74592],[-74.00932,40.74582],[-74.00941,40.74578],[-74.00965,40.74576],[-74.01166,40.74596],[-74.01173,40.74564],[-74.01156,40.74558],[-74.00961,40.74535],[-74.00955,40.74528],[-74.00957,40.74502],[-74.00875,40.7449],[-74.00872,40.74474],[-74.00894,40.74289],[-74.00912,40.74272],[-74.00922,40.74223],[-74.00943,40.74186],[-74.00964,40.7405],[-74.00993,40.74004],[-74.01035,40.73905],[-74.01061,40.73583],[-74.01064,40.7347],[-74.01066,40.7345],[-74.01072,40.7345]]}}]};
+
+if( data.title ) {
+    var t = document.getElementById('title');
+    t.innerHTML = data.title;
+    t.style.display = 'block';
+}
+
+var layer = L.geoJson(data, {
+    style: function( feature ) {
+        var style = {};
+        if( feature.properties.color)
+            style.color = feature.properties.color;
+        if( feature.geometry.type == 'Polygon' ) {
+            style.weight = 3;
+            style.opacity = 0.7;
+            style.fill = true;
+            style.fillOpacity = 0.1;
+        } else if( feature.geometry.type == 'LineString' ) {
+            style.weight = 5;
+            style.opacity = 0.7;
+        }
+        return style;
+    },
+    onEachFeature: function( feature, layer ) {
+        var title = feature.properties.title;
+        if( title ) {
+            if( layer instanceof L.Marker && title.length <= 30 ) {
+                layer.setIcon(new L.PopupIcon(title));
+                layer.options.clickable = false;
+            } else
+                layer.bindPopup(title);
+        } else
+            layer.options.clickable = false;
+    }
+}).addTo(map);
+map.fitBounds(layer.getBounds());
+</script>
+</body>
+</html>
