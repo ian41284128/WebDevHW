@@ -95,7 +95,7 @@ article{
     margin: 20px;
     width: fit-content;
     margin-left: 50%;
-    transform: rotate(0deg);
+    transform: rotate(2deg);
 }
 
 @media (max-width: 768px){
