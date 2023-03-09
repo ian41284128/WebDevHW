@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+}
+html, body{
+    margin: 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+header{
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    padding: 20px;
+    margin: 0;
+    background-image: url(images/windbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 768px){
+    #pcbanner{
+        display: none;
+    }
+}
+@media (min-width: 768px){
+    #mobilebanner{
+        display: none;
+    }
+    article{
+        position: absolute;
+        width: 40%;
+        top: 0;
+        background: none;
+        backdrop-filter: blur(8px);
+        font-weight: bold;
+    }
+}
+
+h1{
+    margin: 0;
+}
+
+.i{
+    font-style: italic;
+}
+
+h1{
+    font-size: 6vw;
+}
+h5{
+    margin: 0;
+}
+#br{
+    text-align: center;
+    width: 100%;
+}
+a{
+    padding: 2px;
+    margin: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+a span{
+    transition: transform .3s ease-out;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    color: black;
+    display:block;
+}
+
+a:hover span {
+    transform: translate(230%, 0);
+}

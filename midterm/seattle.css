@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Slab:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+img{
+    position: fixed;
+    height: 100%;
+    width: auto;
+    top: 0;
+    right: -80px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+img.visible{
+    display: block;
+    opacity: 1;
+}
+
+article{
+    position: relative;
+    z-index: 100;
+}
+
+p{
+    width: 40%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+header p{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    margin: 20px;
+    text-align: center;
+}
+
+h1, h2, h3{
+    margin: 10%;
+    font-family: 'Roboto Slab', serif;
+}
+
+h2, h3{
+    width: 40%;
+    margin-bottom: 0;
+}
+
+a{
+    position: relative;
+    width: 30%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    float: right;
+    background-color: #8DC56C;
+}

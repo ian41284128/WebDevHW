@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="seattle.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).on("scroll", function() {
+            var pageTop = $(document).scrollTop();
+            var pageBottom = pageTop + $(window).height();
+            var runs = $(".run");
+            var maps = $("img");
+          
+            for (var i = 0; i < runs.length; i++) {
+              if ($(runs[i]).position().top < pageTop) {
+                $(maps[i]).addClass("visible");
+              } else {
+                $(maps[i]).removeClass("visible");
+              }
+            }
+          });
+          
+    </script>
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Running by Myself</h1>
+    <p>
+      In the winter, I went back home to Seattle, Washington. It was the first time I would be running alone. I had to think about things like pacing, distance, and managing my own effort for the first time. This is a skill that I discovered I was not the best at, and that small discomfort in my knee from before the Turkeytrot was about to become a much bigger issue.
+    </p>
+  </header>
+  <article>
+    <div class="run">
+      <h2>It started out fine...</h2>
+      <p>
+        Unsure of where exactly to go for my first run, I went with my dad. He took me on a route with a 305 foot elevation gain at roughly eight minute pace. I had not felt as exhausted after three miles since my first week running in September.
+      </p>
+    </div>
+    <div class="run">
+      <h2>So the next day I went alone</h2>
+      <p>
+        It was a weekday and my dad had work, so I decided to take the same route again by myself. I had big plans for training daily in Seattle. David's family moved to Salt Lake City, Utah, and he would be running at much higher elevation than me. If I wanted to keep up when we all got back to New York, I would have to take advantage of Seattles hills.
+      </p>
+    </div>
+    <div class="run">
+      <h2>Taking full advantage</h2>
+      <p>
+        So the next day, I woke up early with my dad and put on my old brooks again. We were going trail running in the park behind my house. We ran four miles from sea level up to 647 feet and back down. The elevation graph for our run looked like vampire teeth. Being unable to run faster than a 50 year old man is a humbling experience.
+      </p>
+    </div>
+    <div class="run">
+      <h2>But I was starting to feel it</h2>
+      <p>
+        I ran alone again. This time I made my own route, doing quick repeats up the hill by my house. I took the long flat terraced roads across and then sprinted up the hill one block and came back the other way. Then I repeated the switchback pattern back down. But as I turned down the second to last switchback, I started feeling a sharp pain in my knee.
+      </p>
+    </div>
+    <div class="run">
+      <h2>Time for a break!</h2>
+      <p>
+        I took a week off. The next weekend, I kept it chill and ran down the flat road outside my house. At the end I did a couple loops and ran back home. But just before getting home, I decided I would try going up the hill once, since I was feeling great. It was not a good idea. I stopped halfway up and turned back.
+      </p>
+    </div>
+    <div class="run">
+      <h2>More weeks off</h2>
+      <p>
+        But it didn't help. I wasn't taking care of my injury in any way. Instead, I tried running again. This time, I barely made it back to my house. Winter break was almost over, and I had almost stopped running completely.
+      </p>
+    </div>
+    <div>
+      <a href="spring.html">It was time to go back to New York.</a>
+    </div>
+  </article>
+  <img src="images/SeattleRuns/run1.png">
+  <img src="images/SeattleRuns/run2.png">
+  <img src="images/SeattleRuns/run3.png">
+  <img src="images/SeattleRuns/run4.png">
+  <img src="images/SeattleRuns/run5.png">
+  <img src="images/SeattleRuns/run6.png">
+</body>
+</html>
