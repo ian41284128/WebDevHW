@@ -302,3 +302,15 @@ a p{
     top: 3500px;
     left: 3000px;
 }
+
+@media (min-width: 768px){
+    .textbox{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    a div{
+        width: 30%;
+        font-size: xx-large;
+        margin-right: 35%;
+    }
+}

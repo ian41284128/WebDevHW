@@ -63,3 +63,10 @@ a{
     float: right;
     background-color: #8DC56C;
 }
+
+@media (min-width: 768px){
+    img{
+        width: 100vw;
+        left: 0;
+    }
+}
