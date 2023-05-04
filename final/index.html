@@ -9,11 +9,43 @@
 </head>
 <body>
     <script type="module" src="/main.js"></script>
-    
-    <div class="scene">
-        <div id="cube">
-            <div class="cube__face cube__face--front">front</div>
-            <div class="cube__face cube__face--back">back</div>
+
+    <div id="WebGL"></div>
+
+    <div class="scene title">
+        <div class="cube">
+            <div class="title cube__face cube__face--back">
+                Hi, <br><br> my name is <br> <a href="google.com"></a><span class="my-name name-hover">Ian Nacke</span></a>
+                <br>
+                <span class="chn-name"><span class="name-hover">蔡</span><span class="name-hover">宜恩</span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="scene left-wall">
+        <div class="cube">
+            <div class="cube__face cube__face--left">
+                <div class="poster" style="left: 10%; top: 20%; height: 40%; width: 20%">Poster of my work #1</div>
+                <div class="poster" style="left: 40%; top: 25%; height: 50%; width: 15%">Poster of my work #2</div>
+                <div class="poster" style="left: 70%; top: 15%; height: 45%; width: 20%">Poster of my work #3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scene doorway">
+        <div class="cube">
+            <div class="cube__face cube__face--front">
+                <div class="mirror">
+                    <img src="mirrorpic.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scene controller">
+        <div class="cube">
+            <div class="cube__face cube__face--front backface">front</div>
+            <div class="cube__face cube__face--back frontface">back</div>
             <div class="cube__face cube__face--right">right</div>
             <div class="cube__face cube__face--left">left</div>
         </div>
