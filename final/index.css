@@ -1,10 +1,11 @@
 :root {
     --fov: 580px;
-    --scale: 18;
+    --scale: 2;
 
-    --ww: 70vh;
+    --ww: 177vh;
     --vw-ww: calc((100vw - var(--ww)) / 2);
     --halfw: calc(var(--ww)/2);
+    --nhalfw: calc(-1 * (var(--halfw)));
 
     --wh: calc(var(--ww) * 0.56);
     --vh-wh: calc((100vh - var(--wh)) / 2);
@@ -32,7 +33,7 @@ img{
     perspective: var(--fov);
 }
 
-.cube {
+#cube {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
@@ -62,10 +63,31 @@ img{
 .cube__face--back   { transform: scale(-1, 1) rotateY(180deg) translateZ(var(--halfw)); }
 .cube__face--left   { transform: scale(-1, 1) rotateY(-90deg) translateZ(var(--halfw)); }
 
-.cube.rotated {
-    transform: scale3d(var(--scale),var(--scale),var(--scale)) rotateY(90deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+#cube.rotate0 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(0deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate360 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(360deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate90 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(90deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate-270 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(-270deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate180 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(180deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate-180 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(-180deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate-90 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(-90deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
+}
+#cube.rotate270 {
+    transform:  scale3d(var(--scale),var(--scale),var(--scale)) rotateY(270deg) translate3d(var(--vw-ww), var(--vh-wh), 0);
 }
 
-.cube.is-backface-hidden .cube__face {
+#cube.is-backface-hidden .cube__face {
     backface-visibility: hidden;
 }
