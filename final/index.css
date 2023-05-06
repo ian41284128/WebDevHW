@@ -141,7 +141,6 @@ a{
 
 .cube__face.backface{
     display: none;
-    pointer-events: none;
 }
 
 .cube__face--front  { background: hsla(  0, 100%, 50%, 0); }
