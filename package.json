@@ -6,7 +6,10 @@
   "devDependencies": {
     "vite": "^4.3.4"
   },
-  "publishConfig": {
-    "@ian41284128:registry": "https://npm.pkg.github.com"
+  "scripts": {
+    "predeploy": "npm install",
+    "deploy": "npx vite",
+    "start": "npx vite",
+    "build": "npm install"
   }
 }

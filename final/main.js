@@ -1,6 +1,6 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js';
+import * as THREE from 'build/three.js';
+//import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+//import { CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js';
 
 function lerp( a, b, alpha ) {
     return a + alpha * ( b - a );
