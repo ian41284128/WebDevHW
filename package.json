@@ -4,12 +4,12 @@
     "three": "^0.152.2"
   },
   "devDependencies": {
-    "vite": "^4.3.4"
+    "vite": "^4.3.5"
   },
   "scripts": {
-    "predeploy": "npm install",
-    "deploy": "npx vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "npx vite",
-    "build": "npm install"
+    "build": "vite build"
   }
 }
