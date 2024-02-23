@@ -143,10 +143,10 @@ a{
     display: none;
 }
 
-.cube__face--front  { background: hsla(  0, 100%, 50%, 0.5); }
+/* .cube__face--front  { background: hsla(  0, 100%, 50%, 0.5); }
 .cube__face--right  { background: hsla( 60, 100%, 50%, 0.5); }
 .cube__face--back   { background: hsla(120, 100%, 50%, 0.5); }
-.cube__face--left   { background: hsla(180, 100%, 50%, 0.5); }
+.cube__face--left   { background: hsla(180, 100%, 50%, 0.5); } */
 
 .cube__face--front  {
     transform: scale(-1, 1) rotateY(0deg) translateZ(var(--halfw)); 
